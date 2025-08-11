@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Postres SASA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- ==== SECCION DE ANIMACIONES DE ENTRADA/SALIDA////-->
+<div class="pantalla-carga" id="pantallaCarga">
+  <img src="image/logo_sasa/logo_completo.jpg" alt="Logo SASA Postres" class="logo-carga">
+</div>
+
+<!-- ######### SECCION 1: BARRA SUPERIOR ENVIOS ############### -->
+  <div class="barra-superior">
+    <div class="contenedor-barra">
+      <!-- Mensajes deslizantes con iconos -->
+      <div class="mensaje-envios">
+        <div class="texto-rotativo-container">
+          <span class="texto-rotativo">
+            <i class="fas fa-truck"></i> Envíos a todo el Perú las 24 hrs.
+          </span>
+          <span class="texto-rotativo">
+            <i class="fas fa-map-marker-alt"></i> Envíos a Provincia (solo Agencia) las 24 hrs.
+          </span>
+          <span class="texto-rotativo">
+            <i class="fas fa-store"></i> Recojo en la tienda Física las 24 hrs.
+          </span>
+        </div>
+      </div>
+      
+      <!-- Redes sociales con iconos de repostería -->
+      <div class="redes-sociales">
+        <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" target="_blank" class="red-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sasapostre/" target="_blank" class="red-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/51957463897" target="_blank" class="red-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@sasapostres" target="_blank" class="red-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION Barra de Búsqueda -->
+      <section class="buscar">
+        <div class="contenedor-busqueda">
+          <div class="logo-busqueda">
+            <img src="image/logo_sasa/fondo-sasa.png" alt="Logo SASA Postres" class="logo-img">
+          </div>
+          <!-- Botón de Categorías estilo hamburguesa -->
+            <div class="boton-categorias" onclick="toggleMenuCategorias()">
+              <i class="fas fa-bars"></i>
+              <span>Categorías</span>
+            </div>
+
+          <!-- SIDEBAR de Categorías y Secciones -->
+          <div id="sidebar-categorias" class="sidebar-categorias oculto">
+            <button class="cerrar-sidebar" onclick="cerrarMenuCategorias()">×</button>
+            <div class="contenido-sidebar">
+              
+              <!-- Sección Categorías -->
+              <div class="menu-seccion">
+                <h4 class="titulo-seccion-sidebar">
+                  <i class="fas fa-folder-open"></i> Categorías
+                </h4>
+                <div id="menu-categorias" class="lista-categorias">
+                  <!-- Se llenará dinámicamente con JS -->
+                </div>
+              </div>
+              
+              <!-- Sección Secciones Especiales -->
+              <div class="menu-seccion">
+                <h4 class="titulo-seccion-sidebar">
+                  <i class="fas fa-star"></i> Secciones
+                </h4>
+                <div class="lista-secciones">
+                  <div class="seccion-item" data-seccion="destacados">
+                    <i class="fas fa-certificate"></i> Productos Destacados
+                  </div>
+                  <div class="seccion-item" data-seccion="ofertas">
+                    <i class="fas fa-tag"></i> Super Ofertas
+                  </div>
+                  <div class="seccion-item" data-seccion="especiales">
+                    <i class="fas fa-calendar-alt"></i> Días Especiales
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <!-- Fondo oscuro al abrir sidebar -->
+            <div id="overlay-sidebar" class="overlay-sidebar oculto" onclick="cerrarMenuCategorias()"></div>
+
+          <div class="grupo-busqueda">
+            <input 
+              type="text" 
+              id="input-buscar" 
+              placeholder="Buscar productos..." 
+              autocomplete="off"
+              aria-label="Buscar productos"
+            >
+            <button class="btn-buscar" id="btn-buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div id="resultados-busqueda" class="resultados-busqueda"></div>
+        </div>
+      </section>
+        
+<!--############### SECCION 2: ENCABEZADO ##################-->
+    <header class="seccion-encabezado">
+      <div class="encabezado-carrusel">
+        <!-- Imagen 1 - Accesorios -->
+        <div class="encabezado-slide" style="background-image: url('image/encabezado/encabezado1.jpg');">
+          <div class="contenido-encabezado">
+            <h1 class="nombre-tienda-curvo">SASÁ POSTRES</h1>
+            <h2 class="titulo-imagen">Accesorios</h2>
+          </div>
+        </div>
+        
+        <!-- Imagen 2 - Indumentaria -->
+        <div class="encabezado-slide" style="background-image: url('image/encabezado/encabezado2.jpg');">
+          <div class="contenido-encabezado">
+            <h1 class="nombre-tienda-curvo">SASÁ POSTRES</h1>
+            <h2 class="titulo-imagen">Indumentaria</h2>
+          </div>
+        </div>
+        
+        <!-- Imagen 3 - Repostería -->
+        <div class="encabezado-slide" style="background-image: url('image/encabezado/encabezado3.jpg');">
+          <div class="contenido-encabezado">
+            <h1 class="nombre-tienda-curvo">SASÁ POSTRES</h1>
+            <h2 class="titulo-imagen">Artículos de Repostería</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles circulares -->
+      <div class="encabezado-controles">
+        <button class="encabezado-control" data-index="0"></button>
+        <button class="encabezado-control" data-index="1"></button>
+        <button class="encabezado-control" data-index="2"></button>
+      </div>
+    </header>
+
+  <!--######### SECCION 3: CATEGORIAS ############-->
+<section class="seccion-categorias" id="categorias">
+  <div class="contenedor-titulo-categorias">
+    <h2 class="titulo-seccion"><span>Nuestras Categorías</span></h2>
+    <p class="subtitulo-seccion">Descubre la dulzura en cada categoría</p>
+  </div>
+
+  <div class="contenedor-carrusel">
+    <div class="cinta-categorias">
+      <!-- Tarjeta: Floreros -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('floreros')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/florero_celeste.png" alt="Florero" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">FLOREROS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Tortas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('tortas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/florero_celeste.png" alt="Tortas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">TORTAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Cheesecakes -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('cheesecakes')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/Helados.png" alt="Cheesecakes" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">CHEESECAKES</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Bocaditos -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('bocaditos')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/bocaditos.jpg" alt="Bocaditos" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">BOCADITOS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Cupcakes -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Cupcakes')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/cupcakes.jpg" alt="Cupcakes" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">CUPCAKES</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Brownies -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('brownies')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/Helados.png" alt="Brownies" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">BROWNIES</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Galletas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('galletas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/galletas.jpg" alt="Galletas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">GALLETAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Macarons -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Macarons')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/macarons.jpg" alt="Macarons" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">MACARONS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Helados -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Helados')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/Helados.png" alt="Helados" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">HELADOS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: bases de tortas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Base para Tortas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/base_torta/base_torta_categoria.png" alt="Base para Tortas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">BASE PARA TORTAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div> 
+      
+      <!-- Tarjeta: mesa giratoria -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Mesas Giratorias')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/mesa_giratoria/mesa_giratoria.jpg" alt="Mesas Giratorias" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">MESAS GIRATORIAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div> 
+      
+      <!-- Tarjeta: moldes de tortas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Moldes de Tortas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/molde_torta/molde_torta.jpg" alt="Moldes de Tortas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">MOLDES DE TORTAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>       
+
+      <!-- Tarjeta: balanzas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Balanzas Grameras')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/balanza/balanza.jpg" alt="Balanzas Grameras" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">BALANZAS GRAMERAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: espatula -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Espatulas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/espatula/espatula.jpg" alt="Espatula" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">ESPÁTULAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: raspas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Raspas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/raspa/raspa.png" alt="Raspas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">RASPAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: raspas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Boquillas')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/boquilla/boquilla.jpg" alt="Boquillas" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">BOQUILLAS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: raspas -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Moldes de silicona')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/molde_silicona/molde_silicona.jpg" alt="Moldes de silicona" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">MOLDES DE SILICONA</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: San Valentin -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('San valentin')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/san_valentin/san_valentin.png" alt="San valentin" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">SAN VALENTÍN</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: Manualidades -->
+      <div class="tarjeta-categoria" onclick="mostrarCatalogo('Manualidades')">
+        <div class="contenedor-imagen-categoria">
+          <img src="image/categorias/manualidades/manualidades.avif" alt="Manualidades" loading="lazy">
+          <div class="overlay-categoria"></div>
+        </div>
+        <div class="contenido-categoria">
+          <div class="titulo-categoria">MANUALIDADES Y MÁS</div>
+          <button class="boton-explorar">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      
+
+
+    </div>
+
+    <!-- Flechas de carrusel -->
+    <button class="flecha-carrusel flecha-izquierda" aria-label="Categoría anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="flecha-carrusel flecha-derecha" aria-label="Categoría siguiente">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="puntos-navegacion"></div>
+  </div>
+</section>
+
+
+  <!-- Sección 3: Productos Destacados -->
+    <section class="seccion-destacados" id="destacados">
+      <h2 class="titulo-seccion">Productos Destacados</h2>
+      <div class="contenedor-destacados" id="contenedor-destacados">
+        <!-- Los primeros 5 productos destacados se cargarán aquí -->
+      </div>
+      <div class="contenedor-boton-vermas">
+        <button id="boton-ver-mas" class="boton-ver-mas">Ver más...</button>
+      </div>
+    </section>
+
+    <!-- Sección 4 "Explorar Catálogo Completo" -->
+    <section class="seccion-catalogo-completo">
+    <div class="carrusel-imagenes">
+        <div class="imagen-carrusel activa" style="background-image: url('image/todos_productos/todos-productos2.jpg');" data-color="#FFB6C1"></div> <!-- Rosa bebé -->
+        <div class="imagen-carrusel" style="background-image: url('image/todos_productos/todos-productos3.jpg');" data-color="#ADD8E6"></div> <!-- Celeste pastel -->
+        <div class="imagen-carrusel" style="background-image: url('image/todos_productos/todos-productos4.jpg');" data-color="#D8BFD8"></div> <!-- Lila pastel -->
+    </div>
+    <div class="contenido-catalogo">
+        <button class="boton-todos" onclick="window.location.href='todos-productos.html'">
+            Ver todos los productos </button>
+    </div>
+    </section>
+
+    <!-- Sección 5: Super Ofertas -->
+    <section class="seccion-ofertas" id="ofertas">
+      <h2 class="titulo-seccion">Super Ofertas</h2>
+      <div class="contenedor-ofertas" id="contenedor-ofertas">
+        <!-- Los primeros 5 productos en oferta se cargarán aquí -->
+      </div>
+      <div class="contenedor-boton-vermas">
+        <button id="boton-ver-mas-ofertas" class="boton-ver-mas">Ver más...</button>
+      </div>
+    </section>
+
+    <!-- Sección 6: Días Especiales -->
+    <section class="seccion-especiales" id="especiales">
+      <h2 class="titulo-seccion">Días Especiales</h2>
+      <div class="contenedor-especiales" id="contenedor-especiales">
+        <!-- Los primeros 5 productos especiales se cargarán aquí -->
+      </div>
+      <div class="contenedor-boton-vermas">
+        <button id="boton-ver-mas-especiales" class="boton-ver-mas">Ver más...</button>
+      </div>
+    </section>
+
+  <!-- Sección 7: Información de Contacto -->
+  <section class="seccion-contacto">
+    <h2 class="titulo-seccion contacto-titulo">Visita nuestra tienda <span class="nombre-tienda">SASÁ POSTRES</span></h2>
+    
+      <div class="info-contacto">
+          <div class="contacto-item">
+              <i class="fas fa-map-marker-alt contacto-icono"></i>
+              <p class="contacto-texto">Jr. 13 de diciembre Galeria QUEEN N° 513 2do Piso Horario 8am-9pm envios a nivel nacional<br>
+              <span class="contacto-subtexto">Distrito de Independencia, Huaraz, Ancash, Perú</span></p>
+          </div>
+          
+          <div class="contacto-item">
+              <i class="fas fa-phone contacto-icono"></i>
+              <p class="contacto-texto">Celular: <span class="contacto-destacado">957-463-897</span></p>
+          </div>
+          
+          <div class="contacto-item">
+              <i class="fas fa-hashtag contacto-icono"></i>
+              <p class="contacto-texto">Síguenos en nuestras redes sociales</p>
+          </div>
+      </div>
+
+    <div class="redes-sociales-contacto">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" 
+       target="_blank" 
+       class="icono-rs fb" 
+       aria-label="Facebook de Sasá Postres">
+       <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/sasapostre/" 
+       target="_blank" 
+       class="icono-rs ig" 
+       aria-label="Instagram de Sasá Postres">
+       <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@sasapostres" 
+       target="_blank" 
+       class="icono-rs tk" 
+       aria-label="TikTok de Sasá Postres">
+       <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/+51957463897" 
+       target="_blank" 
+       class="icono-rs wa" 
+       aria-label="WhatsApp de Sasá Postres">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+      <!-- Agrega más redes sociales -->
+    </div>
+  </section>
+
+
+  <!-- scripts -->
+    <script src="index.js"></script>
+
+    <script>
+      document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.key.toLowerCase() === 'u') e.preventDefault();
+  if (e.key === 'F12') e.preventDefault();
+});
+    </script>
+  <!-- BOTON FLOTANTE PARA WHATSAPP -->
+    <a href="https://wa.me/+51957463897" class="boton-flotante" target="_blank" aria-label="Pedidos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<!-- ==== ANIMACIONES DE ENTRADA/SALIDA////-->
+<script src="carga.js"></script>
+</body>
+</html>
