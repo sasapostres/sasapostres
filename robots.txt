@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sasapostres.github.io/sasapostres/sitemap.xml
