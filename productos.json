@@ -481,8 +481,8 @@
   
   
   {
-    "nombre": "Molde redondo 7.5x22cm de aluminio",
-    "precio": 10,
+    "nombre": "Molde plano #8 el rendidor",
+    "precio": 7.30,
     "categoria": "Moldes de Tortas",
     "imagen": "image/categorias/molde_torta/molde_torta_redondo.jpg",
     "destacado": false,
@@ -502,10 +502,80 @@
     "unidad": "pack"
   },  
   {
-    "nombre": "Molde redondo 8x24cm de aluminio",
-    "precio": 10,
+    "nombre": "Molde plano #10 el rendidor",
+    "precio": 7.80,
     "categoria": "Moldes de Tortas",
     "imagen": "image/categorias/molde_torta/molde_torta_redondo.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #12 el rendidor",
+    "precio": 8.20,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_torta_redondo.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #14 el rendidor",
+    "precio": 8.30,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_torta_redondo.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #16 el rendidor",
+    "precio": 8.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_16.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #18 el rendidor",
+    "precio": 9,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_18.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #20 el rendidor",
+    "precio": 11,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_20.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #22 el rendidor",
+    "precio": 12,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_22.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },  
+  {
+    "nombre": "Molde Plano #24 el rendidor",
+    "precio": 13,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_24.jpg",
     "destacado": false,
     "precioOferta": 0,
     "oferta": false,
