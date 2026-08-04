@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="H6BS__uU0yrXPsQaBUVvrYFw1wXFpHlkPlAaXagjzT4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SASA POSTRES - Tienda de Productos para Repostería y Utensilios a todo el Perú</title>
+  
+  <meta name="description" content="Tienda online SASÁ POSTRES (también SASA POSTRES): Venta de productos para repostería, moldes para tortas, bases giratorias, espátulas, boquillas, utensilios de cocina. Envíos a todo Perú las 24 horas.">
+  <meta name="keywords" content="sasá postres, sasa postres, sasapostres, tienda repostería, productos repostería Lima, moldes tortas, bases giratorias, espátulas, boquillas, envíos Perú">
+  <meta name="author" content="SASÁ POSTRES">
+  <meta name="copyright" content="SASÁ POSTRES">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  
+  <meta property="og:title" content="SASÁ POSTRES | Tienda de Repostería Online">
+  <meta property="og:description" content="Todo para repostería: moldes, bases, utensilios. Envíos a todo Perú las 24 horas ✓">
+  <meta property="og:image" content="https://sasapostres.github.io/sasapostres/image/logo_sasa/logo_completo.jpg">
+  <meta property="og:url" content="https://sasapostres.github.io/sasapostres/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="SASÁ POSTRES">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SASÁ POSTRES - Tienda Online de Repostería">
+  <meta name="twitter:description" content="Productos profesionales para repostería en Perú">
+  <meta name="twitter:image" content="https://sasapostres.github.io/sasapostres/image/logo_sasa/logo_completo.jpg">
+  
+  <meta name="geo.region" content="PE">
+  <meta name="geo.placename" content="Lima">
+  <meta name="geo.position" content="-12.046374;-77.042793">
+  <meta name="ICBM" content="-12.046374, -77.042793">
+  
+  <link rel="icon" type="image/png" href="image/logo_sasa/fondo-sasa.png">
+
+  <!-- Fuentes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- PANTALLA DE CARGA -->
+<div class="pantalla-carga" id="pantallaCarga">
+  <img src="image/logo_sasa/logo_completo.jpg" alt="Logo SASA Postres" class="logo-carga">
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+    <span class="topbar-badge"><i class="fas fa-truck"></i> ENVÍOS DÍA A DÍA</span>
+    <span style="font-weight: 600;">🚚 Envíos a nivel nacional</span>
+  </div>
+  <div class="topbar-socials">
+    <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/sasapostre/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/51957463897" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.tiktok.com/@sasapostres" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<!-- HEADER STICKY -->
+<div class="header-wrapper">
+<header>
+  <a href="index.html" class="brand-logo">
+    <div class="logo-circle">
+      <img src="image/logo_sasa/fondo-sasa.png" alt="SASA">
+    </div>
+    <div>
+      <div class="logo-title">sasá POSTRES</div>
+      <div class="logo-subtitle">Artículos de Repostería</div>
+    </div>
+  </a>
+
+  <div class="search-box">
+    <input type="text" id="input-buscar" placeholder="Buscar moldes, cajas, boquillas..." autocomplete="off" aria-label="Buscar productos">
+    <button id="btn-buscar" aria-label="Buscar"><i class="fas fa-search"></i></button>
+  </div>
+
+  <nav class="header-nav">
+    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a>
+    <button class="nav-link" onclick="toggleMenuCategorias()"><i class="fas fa-layer-group"></i> Categorías</button>
+    <a href="todos-productos.html" class="nav-link"><i class="fas fa-box-open"></i> Productos</a>
+    <a href="https://wa.me/+51957463897" target="_blank" class="btn-order"><i class="fab fa-whatsapp"></i> Pedir Ya</a>
+  </nav>
+</header>
+</div>
+
+<!-- SIDEBAR CATEGORÍAS -->
+<div id="sidebar-categorias" class="sidebar-categorias oculto">
+  <button class="cerrar-sidebar" onclick="cerrarMenuCategorias()">&times;</button>
+  <div class="contenido-sidebar">
+    <div class="menu-seccion">
+      <h4 class="titulo-seccion-sidebar"><i class="fas fa-folder-open"></i> Categorías</h4>
+      <div id="menu-categorias" class="lista-categorias"></div>
+    </div>
+    <div class="menu-seccion">
+      <h4 class="titulo-seccion-sidebar"><i class="fas fa-star"></i> Secciones</h4>
+      <div class="lista-secciones">
+        <div class="seccion-item" data-seccion="destacados"><i class="fas fa-certificate"></i> Productos Destacados</div>
+        <div class="seccion-item" data-seccion="ofertas"><i class="fas fa-tag"></i> Super Ofertas</div>
+        <div class="seccion-item" data-seccion="especiales"><i class="fas fa-calendar-alt"></i> Feliz Navidad</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="overlay-sidebar" class="overlay-sidebar oculto" onclick="cerrarMenuCategorias()"></div>
+
+<!-- HERO -->
+<section class="hero-container">
+  <div class="hero-card">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-sparkles"></i> Catálogo Oficial 2026</span>
+      <h1 class="hero-title">Todo para tus <span>Creaciones</span></h1>
+      <p class="hero-description">Artículos de repostería y mucho más. Insumos de alta calidad, moldes de silicona flexible y accesorios profesionales para llevar tus creaciones al siguiente nivel.</p>
+      <div class="hero-buttons">
+        <a href="todos-productos.html" class="btn-main"><i class="fas fa-arrow-right"></i> Ver Catálogo</a>
+        <a href="https://wa.me/+51957463897" target="_blank" class="btn-main" style="background: #25D366;"><i class="fab fa-whatsapp"></i> Pedir Ahora</a>
+      </div>
+    </div>
+    <div class="hero-graphic-box">
+      <div class="hero-circle-art">
+        <img src="image/logo_sasa/logo_completo.jpg" alt="SASÁ POSTRES">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-section">
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-truck-fast"></i></div>
+      <div class="trust-info"><h4>Envíos Seguros</h4><p>A todo Huaraz y Provincias</p></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-medal"></i></div>
+      <div class="trust-info"><h4>Alta Calidad</h4><p>Herramientas duraderas</p></div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-headset"></i></div>
+      <div class="trust-info"><h4>Asesoría Directa</h4><p>Atención por WhatsApp</p></div>
+    </div>
+    <div class="trust-card">
+    <div class="trust-icon"><i class="fas fa-gift"></i></div>
+    <div class="trust-info"><h4>Novedades</h4><p>Actualización constante</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORÍAS - CARRUSEL INFINITO -->
+<section class="section-container" id="categorias">
+  <h2 class="section-title"><i class="fas fa-mortar-pestle"></i> Categorías Principales</h2>
+  <p class="section-subtitle">Explora y Descubre la dulzura en cada categoría</p>
+
+  <div class="carousel-wrapper" id="carousel-categorias-wrapper">
+    <div class="carousel-track" id="carousel-categorias-track"></div>
+  </div>
+</section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="section-container" id="destacados">
+  <h2 class="section-title"><i class="fas fa-star"></i> Productos Destacados</h2>
+  <p class="section-subtitle">Los favoritos de nuestra comunidad repostera</p>
+  <div class="products-grid" id="contenedor-destacados"></div>
+  <div class="contenedor-boton-vermas" style="text-align:center; margin-top:30px;">
+    <a href="resultados-busqueda.html?destacados=true" class="btn-main" id="boton-ver-mas" style="display:none;">Ver todos los destacados <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- SUPER OFERTAS -->
+<section class="section-container" id="ofertas" style="background: linear-gradient(135deg, #fff5f5 0%, #ffe8ef 100%);">
+  <h2 class="section-title"><i class="fas fa-tag"></i> Super Ofertas</h2>
+  <p class="section-subtitle">Precios especiales por tiempo limitado</p>
+  <div class="products-grid" id="contenedor-ofertas"></div>
+  <div class="contenedor-boton-vermas" style="text-align:center; margin-top:30px;">
+    <a href="resultados-busqueda.html?ofertas=true" class="btn-main" id="boton-ver-mas-ofertas" style="display:none; background: #e74c3c;">Ver todas las ofertas <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- FELIZ NAVIDAD / ESPECIALES -->
+<section class="section-container" id="especiales" style="background: linear-gradient(135deg, #f0fafd 0%, #e8f8e8 100%);">
+  <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Feliz Navidad</h2>
+  <p class="section-subtitle">Productos especiales para estas fechas</p>
+  <div class="products-grid" id="contenedor-especiales"></div>
+  <div class="contenedor-boton-vermas" style="text-align:center; margin-top:30px;">
+    <a href="resultados-busqueda.html?especiales=true" class="btn-main" id="boton-ver-mas-especiales" style="display:none; background: #10b981;">Ver todos los especiales <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- BANNERS PROMOCIONALES -->
+<section class="promo-container">
+  <div class="promo-grid">
+    <div class="promo-card" onclick="window.location.href='resultados-busqueda.html?ofertas=true'" style="cursor:pointer;">
+      <div>
+        <span style="font-size:0.68rem; font-weight:800; color:var(--sasa-rosado); text-transform:uppercase; margin-bottom:4px; display:inline-block; background:white; padding:3px 10px; border-radius:var(--radius-pill);">Ofertas</span>
+        <h4 class="promo-title">Especiales del mes</h4>
+        <span class="btn-promo">Ver catálogo <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <i class="fas fa-cake-candles" style="font-size:3.5rem;color:var(--sasa-rosado);"></i>
+    </div>
+    <div class="promo-card" onclick="window.location.href='todos-productos.html'" style="cursor:pointer;">
+      <div>
+        <span style="font-size:0.68rem; font-weight:800; color:var(--sasa-rosado); text-transform:uppercase; margin-bottom:4px; display:inline-block; background:white; padding:3px 10px; border-radius:var(--radius-pill);">Nuevos</span>
+        <h4 class="promo-title">Productos exclusivos</h4>
+        <span class="btn-promo">Ver novedades <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <i class="fas fa-bread-slice" style="font-size:3.5rem;color:var(--sasa-rosado);"></i>
+    </div>
+    <div class="promo-card" onclick="window.open('https://wa.me/+51957463897', '_blank')" style="cursor:pointer;">
+      <div>
+        <span style="font-size:0.68rem; font-weight:800; color:var(--sasa-rosado); text-transform:uppercase; margin-bottom:4px; display:inline-block; background:white; padding:3px 10px; border-radius:var(--radius-pill);">Todo para</span>
+        <h4 class="promo-title">tu negocio</h4>
+        <span class="btn-promo">Cotizar directo <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <i class="fas fa-store" style="font-size:3.5rem;color:var(--sasa-rosado);"></i>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>sasá POSTRES</h4>
+      <p>Especialistas en artículos, moldes e insumos de repostería. Calidad profesional para emprendedores y amantes de la pastelería en todo el Perú.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sasapostre/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+51957463897" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=Moldes%20para%20fondant">Moldes Fondant</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=San%20valentin">Especial San Valentín</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=Manualidades">Manualidades</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html">Repostería Creativa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Envíos</h5>
+      <ul>
+        <li><i class="fas fa-truck"></i> Envíos a nivel nacional</li>
+        <li><i class="fas fa-map-marker-alt"></i> Atendemos pedidos en todo el Perú</li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+51957463897">957 463 897</a> / <a href="https://wa.me/+51950275817">950 275 817</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-heart"><i class="fas fa-heart"></i> Endulzamos tus momentos, hacemos realidad tus creaciones <i class="fas fa-heart"></i></p>
+    <p>&copy; 2026 <span>Sasá Postres</span> — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/+51957463897" class="whatsapp-btn" target="_blank" title="Escribir por WhatsApp" aria-label="Pedidos por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- EFECTO NIEVE -->
+<div id="efecto-nieve" class="efecto-nieve"></div>
+
+<!-- DATOS ESTRUCTURADOS SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SASÁ POSTRES",
+  "alternateName": ["SASA POSTRES", "Sasá Postres", "Sasapostres"],
+  "description": "Tienda online de productos para repostería en Perú",
+  "url": "https://sasapostres.github.io/sasapostres/",
+  "telephone": "+51957463897",
+  "openingHours": "Mo-Su 08:00-21:00",
+  "image": "https://sasapostres.github.io/sasapostres/image/logo_sasa/logo_completo.jpg",
+  "sameAs": [
+    "https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/",
+    "https://www.instagram.com/sasapostre/",
+    "https://www.tiktok.com/@sasapostres"
+  ]
+}
+</script>
+
+<!-- SCRIPTS -->
+<script src="js/funciones.js"></script>
+<script src="js/componentes.js"></script>
+<script src="js/productos.js"></script>
+
+<script>
+  // ==========================================
+  // LÓGICA ESPECÍFICA DEL INDEX
+  // ==========================================
+  
+  /**
+   * Carrusel infinito de categorías
+   */
+
+    function inicializarCarruselCategorias() {
+    const track = document.getElementById('carousel-categorias-track');
+    if (!track) return;
+
+    const categorias = obtenerCategorias();
+    
+    const imagenes = {
+        'Base para Tortas': 'image/categorias/base_torta/base_torta_categoria.jpg',
+        'Mesas Giratorias': 'image/categorias/mesa_giratoria/mesa_giratoria.jpg',
+        'Moldes de Tortas': 'image/categorias/molde_torta/molde_torta.jpg',
+        'Balanzas Grameras': 'image/categorias/balanza/balanza.jpg',
+        'Espatulas': 'image/categorias/espatula/espatula.jpg',
+        'Raspas': 'image/categorias/raspa/raspa.jpg',
+        'Boquillas': 'image/categorias/boquilla/boquilla.jpg',
+        'Moldes de chocolate': 'image/categorias/molde_chocolate/molde_chocolate.jpg',
+        'Moldes para fondant': 'image/categorias/molde_fondant/molde_fondant.jpg',
+        'San valentin': 'image/categorias/san_valentin/san_valentin.jpg',
+        'Manualidades': 'image/categorias/manualidades/manualidades.jpg'
+    };
+
+    const tarjetasHTML = categorias.map(cat => {
+        const imgSrc = imagenes[cat] || 'image/logo_sasa/fondo-sasa.png';
+        return `
+        <div class="category-card" onclick="window.location.href='todos-productos.html?categoria=${encodeURIComponent(cat)}'" style="cursor:pointer;">
+            <div class="category-icon">
+            <img src="${imgSrc}" alt="${cat}" style="width:100%;height:100%;object-fit:contain;border-radius:16px;">
+            </div>
+            <h4>${capitalizar(cat)}</h4>
+            <button class="boton-explorar" style="margin-top:8px;">Explorar <i class="fas fa-arrow-right"></i></button>
+        </div>`;
+    }).join('');
+
+    track.innerHTML = tarjetasHTML + tarjetasHTML;
+
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+    }
+
+  function contarProductosPorCategoria(categoria) {
+    return productosGlobales.filter(p => p.categoria === categoria).length;
+  }
+
+  /**
+   * Carga los productos destacados en la home
+   */
+  function cargarProductosDestacados() {
+    const destacados = productosGlobales
+      .filter(p => p.destacado === true)
+      .sort((a, b) => b.id - a.id);
+
+    const primeros = destacados.slice(0, 8);
+    renderizarProductos(primeros, 'contenedor-destacados');
+
+    const botonVerMas = document.getElementById('boton-ver-mas');
+    if (botonVerMas) {
+      botonVerMas.style.display = destacados.length > 8 ? 'inline-flex' : 'none';
+    }
+  }
+
+  /**
+   * Carga las ofertas en la home
+   */
+  function cargarProductosOfertas() {
+    const ofertas = productosGlobales
+      .filter(p => p.oferta === true)
+      .sort((a, b) => b.id - a.id);
+
+    const primeros = ofertas.slice(0, 8);
+    renderizarProductos(primeros, 'contenedor-ofertas');
+
+    const botonVerMas = document.getElementById('boton-ver-mas-ofertas');
+    if (botonVerMas) {
+      botonVerMas.style.display = ofertas.length > 8 ? 'inline-flex' : 'none';
+    }
+  }
+
+  /**
+   * Carga los productos especiales en la home
+   */
+  function cargarProductosEspeciales() {
+    const especiales = productosGlobales
+      .filter(p => p.especial === true)
+      .sort((a, b) => b.id - a.id);
+
+    const primeros = especiales.slice(0, 8);
+    renderizarProductos(primeros, 'contenedor-especiales');
+
+    const botonVerMas = document.getElementById('boton-ver-mas-especiales');
+    if (botonVerMas) {
+      botonVerMas.style.display = especiales.length > 8 ? 'inline-flex' : 'none';
+    }
+  }
+
+  // ==========================================
+  // INICIALIZACIÓN
+  // ==========================================
+  document.addEventListener('DOMContentLoaded', async function () {
+    await inicializarSitio();
+    configurarBusqueda('input-buscar', 'resultados-busqueda', 'btn-buscar');
+    inicializarCarruselCategorias();
+    cargarProductosDestacados();
+    cargarProductosOfertas();
+    cargarProductosEspeciales();
+  });
+</script>
+
+</body>
+</html>
