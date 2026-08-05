@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos los Productos - SASA Postres</title>
+  
+  <meta name="description" content="Catálogo completo de productos SASÁ POSTRES: bases para tortas, moldes, boquillas, utensilios de repostería. Envíos a todo Perú.">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="icon" type="image/png" href="image/logo_sasa/fondo-sasa.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+</head>
+<body class="todos-productos">
+
+<div class="pantalla-carga" id="pantallaCarga">
+  <img src="image/logo_sasa/logo_completo.jpg" alt="Logo SASA Postres" class="logo-carga">
+</div>
+
+<div class="topbar">
+  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+    <span class="topbar-badge"><i class="fas fa-truck"></i> ENVÍOS DÍA A DÍA</span>
+    <span style="font-weight: 600;">🚚 Envíos a nivel nacional</span>
+  </div>
+  <div class="topbar-socials">
+    <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/sasapostre/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/51957463897" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.tiktok.com/@sasapostres" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<div class="header-wrapper">
+<header>
+  <a href="index.html" class="brand-logo">
+    <div class="logo-circle">
+      <img src="image/logo_sasa/fondo-sasa.png" alt="SASA">
+    </div>
+    <div>
+      <div class="logo-title">sasá POSTRES</div>
+      <div class="logo-subtitle">Artículos de Repostería</div>
+    </div>
+  </a>
+
+  <div class="search-box">
+    <input type="text" id="input-buscar" placeholder="Buscar moldes, cajas, boquillas..." autocomplete="off" aria-label="Buscar productos">
+    <button id="btn-buscar" aria-label="Buscar"><i class="fas fa-search"></i></button>
+  </div>
+
+  <nav class="header-nav">
+    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a>
+    <button class="nav-link" onclick="toggleMenuCategorias()"><i class="fas fa-layer-group"></i> Categorías</button>
+    <a href="todos-productos.html" class="nav-link"><i class="fas fa-box-open"></i> Productos</a>
+    <a href="https://wa.me/+51957463897" target="_blank" class="btn-order"><i class="fab fa-whatsapp"></i> Pedir Ya</a>
+  </nav>
+</header>
+</div>
+
+<div id="sidebar-categorias" class="sidebar-categorias oculto">
+  <button class="cerrar-sidebar" onclick="cerrarMenuCategorias()">&times;</button>
+  <div class="contenido-sidebar">
+    <div class="menu-seccion">
+      <h4 class="titulo-seccion-sidebar"><i class="fas fa-folder-open"></i> Categorías</h4>
+      <div id="menu-categorias" class="lista-categorias"></div>
+    </div>
+    <div class="menu-seccion">
+      <h4 class="titulo-seccion-sidebar"><i class="fas fa-star"></i> Secciones</h4>
+      <div class="lista-secciones">
+        <div class="seccion-item" data-seccion="destacado"><i class="fas fa-certificate"></i> Productos Destacados</div>
+        <div class="seccion-item" data-seccion="oferta"><i class="fas fa-tag"></i> Super Ofertas</div>
+        <div class="seccion-item" data-seccion="especial"><i class="fas fa-calendar-alt"></i> Novedades</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="overlay-sidebar" class="overlay-sidebar oculto" onclick="cerrarMenuCategorias()"></div>
+
+<div class="contenedor-categoria-productos">
+  <aside class="sidebar-categoria" id="sidebar-filtros">
+    <h3 class="titulo-sidebar">Filtros</h3>
+
+    <div class="filtro-seccion oculto" id="filtro-formas-base">
+      <h4 class="titulo-filtro">Tipo de Base</h4>
+      <div class="lista-filtro-formas">
+        <label><input type="checkbox" value="redondo" class="checkbox-forma"> Redondo</label><br>
+        <label><input type="checkbox" value="cuadrado" class="checkbox-forma"> Cuadrado</label><br>
+        <label><input type="checkbox" value="rectangular" class="checkbox-forma"> Rectangular</label><br>
+        <label><input type="checkbox" value="corazon" class="checkbox-forma"> Corazón</label><br>
+        <label><input type="checkbox" value="marmoleado" class="checkbox-forma"> Marmoleado</label>
+      </div>
+    </div>
+
+    <div class="filtro-seccion">
+      <h4 class="titulo-filtro">Categorías</h4>
+      <div class="lista-categorias" id="lista-categorias"></div>
+    </div>
+
+    <div class="filtro-seccion">
+      <h4 class="titulo-filtro">Secciones</h4>
+      <div class="lista-secciones">
+        <div class="seccion-item" data-seccion="destacado"><i class="fas fa-star"></i> Productos Destacados</div>
+        <div class="seccion-item" data-seccion="oferta"><i class="fas fa-tag"></i> Super Ofertas</div>
+        <div class="seccion-item" data-seccion="especial"><i class="fas fa-calendar-alt"></i> Novedades</div>
+      </div>
+    </div>
+
+    <div class="filtro-seccion">
+      <h4 class="titulo-filtro">Rango de Precios</h4>
+      <div class="rango-precio-slider">
+        <div class="slider-container">
+          <div id="slider-precio"></div>
+        </div>
+        <div class="valores-precio">
+          <span id="min-precio">S/ 0</span>
+          <span>-</span>
+          <span id="max-precio">S/ 0</span>
+        </div>
+        <button id="aplicar-filtro-precio" class="boton-filtro">Aplicar</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="contenido-principal">
+    <div class="cabecera-productos">
+      <h1 id="titulo-categoria">Todos los Productos</h1>
+      <div class="contenedor-ordenar">
+        <label for="ordenar-productos">Ordenar por:</label>
+        <select id="ordenar-productos" class="select-ordenar">
+          <option value="relevancia">Relevancia</option>
+          <option value="nombreAZ">Nombre, A a Z</option>
+          <option value="nombreZA">Nombre, Z a A</option>
+          <option value="precioAsc">Precio: más bajo a más alto</option>
+          <option value="precioDesc">Precio: más alto a más bajo</option>
+        </select>
+      </div>
+
+      <div class="contenedor-forma-movil" id="contenedor-forma-movil" style="display:none;">
+        <label class="filtro-forma-label">
+          <span>Tipo de Base:</span>
+          <select id="filtro-forma-movil" class="select-ordenar select-forma-movil">
+            <option value="">Todas las formas</option>
+            <option value="redondo">Redondo</option>
+            <option value="cuadrado">Cuadrado</option>
+            <option value="rectangular">Rectangular</option>
+            <option value="corazon">Corazón</option>
+            <option value="marmoleado">Marmoleado</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="products-grid" id="contenedor-productos"></div>
+  </main>
+</div>
+
+<footer id="contacto">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>sasá POSTRES</h4>
+      <p>Especialistas en artículos, moldes e insumos de repostería. Calidad profesional para emprendedores y amantes de la pastelería en todo el Perú.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/p/Sas%C3%A1-Postres-100063645605016/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/sasapostre/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+51957463897" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=Moldes%20para%20fondant">Moldes Fondant</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=San%20valentin">Especial San Valentín</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html?categoria=Manualidades">Manualidades</a></li>
+        <li><i class="fas fa-chevron-right" style="font-size:0.7rem; color:var(--sasa-yellow);"></i> <a href="todos-productos.html">Repostería Creativa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Envíos</h5>
+      <ul>
+        <li><i class="fas fa-truck"></i> Envíos a nivel nacional</li>
+        <li><i class="fas fa-map-marker-alt"></i> Atendemos pedidos en todo el Perú</li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+51957463897">957 463 897</a> / <a href="https://wa.me/+51950275817">950 275 817</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-heart"><i class="fas fa-heart"></i> Endulzamos tus momentos, hacemos realidad tus creaciones <i class="fas fa-heart"></i></p>
+    <p>&copy; 2026 <span>Sasá Postres</span> — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/+51957463897" class="whatsapp-btn" target="_blank" title="Escribir por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script src="js/funciones.js"></script>
+<script src="js/componentes.js"></script>
+<script src="js/productos.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async function () {
+    await inicializarSitio();
+    configurarBusqueda('input-buscar', 'resultados-busqueda', 'btn-buscar');
+    cargarCategoriasSidebar();
+    inicializarSliderPrecio();
+    configurarPaginaCatalogo();
+    mostrarProductosFiltrados();
+  });
+</script>
+
+</body>
+</html>
