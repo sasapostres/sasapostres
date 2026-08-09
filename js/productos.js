@@ -138,7 +138,7 @@ function mostrarProductosFiltrados() {
       const titulos = {
         'destacado': 'Productos Destacados',
         'oferta': 'Super Ofertas',
-        'especial': 'Novedades'
+        'novedad': 'Novedades'
       };
       titulo.textContent = titulos[seccionActual] || 'Productos';
     } else if (categoriaActual && categoriaActual.toLowerCase() !== 'todos') {
@@ -149,6 +149,8 @@ function mostrarProductosFiltrados() {
   }
 
   renderizarProductos(productosFiltrados, 'contenedor-productos', 'No hay productos con estos filtros.');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function configurarPaginaCatalogo() {
