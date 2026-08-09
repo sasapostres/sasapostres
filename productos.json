@@ -2056,6 +2056,153 @@
     "precioOferta": 0,
     "oferta": false,
     "especial": false
-  }  
+  },
+  {
+    "id": 178,
+    "nombre": "Maqueta de tecnopor #30 altura 10cm",
+    "precio": 7.50,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/maqueta_torta.png",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 179,
+    "nombre": "Maqueta de tecnopor #25 altura 10cm",
+    "precio": 5.50,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/maqueta_torta.png",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 180,
+    "nombre": "Maqueta de tecnopor #20 altura 10cm",
+    "precio": 5,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/maqueta_torta.png",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 181,
+    "nombre": "Maqueta de tecnopor #15 altura 10cm",
+    "precio": 4,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/maqueta_torta.png",
+    "destacado": true,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 182,
+    "nombre": "Base de tecnopor #40 espesor 2.5cm",
+    "precio": 4,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 183,
+    "nombre": "Base de tecnopor #35 espesor 2.5cm",
+    "precio": 3.80,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 184,
+    "nombre": "Base de tecnopor #30 espesor 2.5cm",
+    "precio": 3.70,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  }
+  ,
+  {
+    "id": 185,
+    "nombre": "Base de tecnopor #25 espesor 2.5cm",
+    "precio": 3.50,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 187,
+    "nombre": "Base de tecnopor #20 espesor 2.5cm",
+    "precio": 3,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 188,
+    "nombre": "Base de tecnopor #15 espesor 2.5cm",
+    "precio": 2.50,
+    "categoria": "Bases y Maquetas Tecnopor",
+    "imagen": "image/categorias/bases_tecnopor/base_torta.jpg",
+    "destacado": true,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 189,
+    "nombre": "Vela escarchada del #0 al #9 y ? con coronitas para cumpleaños",
+    "precio": 25,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/vela_escarchada_corona.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "x docena"
+  },
+  {
+    "id": 190,
+    "nombre": "Velas box de 104 unidades numeral y ? para cumpleaños",
+    "precio": 30,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/vela_box.jpg",
+    "destacado": false,
+    "precioOferta": 25,
+    "oferta": true,
+    "especial": true,
+    "unidad": "SUPER OFERTA"
+  },
+  {
+    "id": 191,
+    "nombre": "Kit de 75 velitas de cumpleaños ",
+    "precio": 345,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/75_velitas.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  } 
+    
   ]
 }
