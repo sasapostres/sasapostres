@@ -2201,7 +2201,8 @@
     "destacado": false,
     "precioOferta": 0,
     "oferta": false,
-    "especial": false
+    "especial": false,
+    "unidad": "CAJA"
   } 
     
   ]
