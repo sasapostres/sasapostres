@@ -25,7 +25,6 @@ function crearTarjetaProducto(producto) {
       ${badgeUnidad}
       <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy">
       <div class="info-producto">
-        <span class="product-category">${producto.categoria}</span>
         <div class="nombre-producto">${producto.nombre}</div>
         <div class="product-footer">
           <span class="${precioOriginal ? 'precio-oferta' : 'precio-producto'}">
@@ -77,6 +76,7 @@ function configurarBusqueda(inputId = 'input-buscar', resultadosId = 'resultados
 
   inputBuscar.addEventListener('input', function () {
     const termino = this.value.trim();
+    if (!resultadosDiv) return;
     resultadosDiv.innerHTML = '';
 
     if (termino.length < 2) {
@@ -84,7 +84,7 @@ function configurarBusqueda(inputId = 'input-buscar', resultadosId = 'resultados
       return;
     }
 
-    const resultados = buscarProductos(termino).slice(0, 8); // Máximo 8 sugerencias
+    const resultados = buscarProductos(termino).slice(0, 8);
 
     if (resultados.length > 0) {
       resultados.forEach(producto => {
@@ -135,7 +135,8 @@ function configurarBusqueda(inputId = 'input-buscar', resultadosId = 'resultados
   });
 
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.contenedor-busqueda') && !e.target.closest('.grupo-busqueda') && !e.target.closest('.grupo-busqueda-flotante')) {
+    if (!resultadosDiv) return;
+    if (!e.target.closest('.contenedor-busqueda') && !e.target.closest('.grupo-busqueda') && !e.target.closest('.grupo-busqueda-flotante') && !e.target.closest('.search-box')) {
       resultadosDiv.style.display = 'none';
     }
   });
@@ -181,24 +182,26 @@ function cargarMenuCompleto() {
   listaCategorias.innerHTML = '';
 
   const itemTodos = document.createElement('div');
-  itemTodos.className = 'categoria-item';
-  itemTodos.innerHTML = '<i class="fas fa-box-open"></i> Todos los productos';
-  itemTodos.addEventListener('click', () => {
-    window.location.href = 'todos-productos.html';
-    cerrarMenuCategorias();
-  });
-  listaCategorias.appendChild(itemTodos);
-
-  categorias.forEach(cat => {
-    const item = document.createElement('div');
-    item.className = 'categoria-item';
-    item.innerHTML = `<i class="fas fa-folder"></i> ${capitalizar(cat)}`;
-    item.addEventListener('click', () => {
-      window.location.href = `todos-productos.html?categoria=${encodeURIComponent(cat)}`;
+    itemTodos.className = 'categoria-item';
+    itemTodos.innerHTML = '<i class="fas fa-box-open"></i> Todos los productos';
+    itemTodos.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.location.href = 'todos-productos.html';
       cerrarMenuCategorias();
     });
-    listaCategorias.appendChild(item);
-  });
+    listaCategorias.appendChild(itemTodos);
+
+    categorias.forEach(cat => {
+      const item = document.createElement('div');
+      item.className = 'categoria-item';
+      item.innerHTML = `<i class="fas fa-folder"></i> ${capitalizar(cat)}`;
+      item.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.location.href = `todos-productos.html?categoria=${encodeURIComponent(cat)}`;
+        cerrarMenuCategorias();
+      });
+      listaCategorias.appendChild(item);
+    });
 
   document.querySelectorAll('.seccion-item').forEach(item => {
     item.addEventListener('click', function () {
@@ -262,4 +265,20 @@ function ordenarProductosDOM(selectId = 'ordenar-productos', contenedorId = 'con
     contenedor.classList.add('fade-in');
     setTimeout(() => contenedor.classList.remove('fade-in'), 500);
   }, 300);
+}
+
+function mostrarPantallaCarga() {
+  const pantalla = document.getElementById('pantallaCarga');
+  if (!pantalla) return;
+  pantalla.style.display = 'flex';
+  pantalla.classList.remove('oculto');
+}
+
+function ocultarPantallaCarga() {
+  const pantalla = document.getElementById('pantallaCarga');
+  if (!pantalla) return;
+  pantalla.classList.add('oculto');
+  setTimeout(() => {
+    pantalla.style.display = 'none';
+  }, 800);
 }
