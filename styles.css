@@ -1100,6 +1100,7 @@ button.nav-link {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 26px;
   padding: 10px 0;
+  align-items: stretch;
 }
 
 .tarjeta-producto,
@@ -1161,16 +1162,14 @@ button.nav-link {
 
 .nombre-producto,
 .info-resultado h3 {
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 0.92rem;
+  font-weight: 700;
   color: var(--text-main);
   margin: 0 0 8px 0;
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;
+  overflow: visible;
+  word-wrap: break-word;
 }
 
 .product-footer {
@@ -1262,6 +1261,7 @@ button.nav-link {
   .contenedor-productos {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 18px;
+    align-items: stretch;
   }
   .tarjeta-producto img {
     height: 160px;
@@ -1284,6 +1284,7 @@ button.nav-link {
   .contenedor-productos {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    align-items: stretch;
   }
   .tarjeta-producto img {
     height: 130px;
