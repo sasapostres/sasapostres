@@ -494,8 +494,6 @@
     "especial": false,
     "unidad": "x docena"
   },
-
-
   {
     "id": 39,
     "nombre": "Mesa giratoria 12x10cm de metal",
@@ -518,8 +516,6 @@
     "oferta": true,
     "especial": false
   },
-  
-  
   {
     "id": 41,
     "nombre": "Molde redondo 7.5x22cm de aluminio",
@@ -554,8 +550,6 @@
     "oferta": false,
     "especial": false
   },
-
-
   {
     "id": 44,
     "nombre": "Balanza gramera digital blanco 0-5Kg 15.5x22.5cm",
@@ -589,8 +583,6 @@
     "oferta": false,
     "especial": false
   },
-  
-
   {
     "id": 47,
     "nombre": "Espátula de silicona FACUSA 27cm",
@@ -613,8 +605,6 @@
     "oferta": true,
     "especial": false
   }, 
-  
-
   {
     "id": 49,
     "nombre": "Raspa alisadora grande 25cm",
@@ -637,8 +627,6 @@
     "oferta": false,
     "especial": false
   },
-  
-
   {
     "id": 51,
     "nombre": "Boquilla Estrella Abierta 1M pastelera",
@@ -788,8 +776,6 @@
     "oferta": false,
     "especial": false
   },
-  
-
   {
     "id": 64,
     "nombre": "Molde de Paletas x8 8.6x42cm silicona",
@@ -2194,7 +2180,7 @@
   },
   {
     "id": 191,
-    "nombre": "Kit de 75 velitas de cumpleaños ",
+    "nombre": "Kit de 75 velitas para cumpleaños",
     "precio": 345,
     "categoria": "Manualidades",
     "imagen": "image/categorias/manualidades/75_velitas.jpg",
@@ -2203,7 +2189,330 @@
     "oferta": false,
     "especial": false,
     "unidad": "CAJA"
-  } 
-    
+  },
+  {
+    "id": 192,
+    "nombre": "Soporte para ramos de flores plástico color negro",
+    "precio": 7.50,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/base_rosa.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 193,
+    "nombre": "Florero de Vidrio Origami Celeste con lazo",
+    "precio": 15,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/florero_celeste.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 194,
+    "nombre": "Florero de Vidrio Con Diseño Borde Dorado",
+    "precio": 15,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/florero_labrado.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "UNIDAD"
+  },
+  {
+    "id": 195,
+    "nombre": "luces led cadena parpadeante decoraciones",
+    "precio": 3,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/luz_led.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 196,
+    "nombre": "Porta tarjetas para ramo de flores y tortas",
+    "precio": 15,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/porta_tarjetero.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 197,
+    "nombre": "Tarjetas de dedicatoria y amor con diseños románticos",
+    "precio": 1,
+    "categoria": "Manualidades",
+    "imagen": "image/categorias/manualidades/tarjeta_dedicatoria.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK x 4"
+  },
+  {
+    "id": 198,
+    "nombre": "Molde plano de aluminio para torta #16 de aluminio",
+    "precio": 9,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_16.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 199,
+    "nombre": "Molde plano de aluminio para torta #18 de aluminio",
+    "precio": 9.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_18.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 200,
+    "nombre": "Molde plano de aluminio para torta #20 de aluminio",
+    "precio": 11,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_20.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 201,
+    "nombre": "Molde plano de aluminio para torta #22 de aluminio",
+    "precio": 12,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_22.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 202,
+    "nombre": "Molde plano de aluminio para torta #24 de aluminio",
+    "precio": 13.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_24.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 203,
+    "nombre": "Molde Corazón para Galletas de Acero 10 Piezas",
+    "precio": 7,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_galleta_corazon.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 204,
+    "nombre": "Molde Estrella para Galletas de Acero 10 Piezas",
+    "precio": 7,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_galleta_estrella.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 205,
+    "nombre": "Molde Flor para Galletas de Acero 5 Piezas",
+    "precio": 7,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/molde_galleta_flor.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 206,
+    "nombre": "Pack de cortador de modelo Mickey Mouse de Acero",
+    "precio": 8,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_mickey.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 207,
+    "nombre": "Pack de cortadores de numeros del 0 al 8",
+    "precio": 15,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_numeros.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 208,
+    "nombre": "Cortador de modelo de Pelota",
+    "precio": 8,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_pelota.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 209,
+    "nombre": "Pack de cortadores de copos de nieve",
+    "precio": 8,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_coponieve.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 210,
+    "nombre": "Cortador de modelo de Paw Patrol",
+    "precio": 8.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_patrol.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 211,
+    "nombre": "Pack de cortadores modelos de Herramientas",
+    "precio": 10,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_herramienta.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 212,
+    "nombre": "Cortador de modelo de Spider Man",
+    "precio": 6,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_spiderman.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false
+  },
+  {
+    "id": 213,
+    "nombre": "Pack de cortadores de Bautizo o Primera Comunión",
+    "precio": 12,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_bautizo.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 214,
+    "nombre": "Pack de cortadores de modelo de Bigotes",
+    "precio": 9.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_bigote.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 215,
+    "nombre": "Pack de cortadores de ventanas",
+    "precio": 8,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_ventana.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 216,
+    "nombre": "Pack de cortadores de ventanas con blondas",
+    "precio": 8.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_ventana_blonda.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 216,
+    "nombre": "Pack de cortadores de modelos de barco",
+    "precio": 7.50,
+    "categoria": "Moldes de Tortas",
+    "imagen": "image/categorias/molde_torta/cortador_barco.jpg",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "PACK"
+  },
+  {
+    "id": 217,
+    "nombre": "Olla Chocolatera Doble electrica color amarillo y rosado",
+    "precio": 90,
+    "categoria": "Máquinas y Accesorios",
+    "imagen": "image/categorias/maquina_accesorio/olla_chocolatera_doble.png",
+    "destacado": false,
+    "precioOferta": 80,
+    "oferta": true,
+    "especial": true,
+    "unidad": "OFERTA"
+  },
+  {
+    "id": 218,
+    "nombre": "Olla Chocolatera Uno electrica color amarillo y rosado",
+    "precio": 45,
+    "categoria": "Máquinas y Accesorios",
+    "imagen": "image/categorias/maquina_accesorio/olla_chocolatera_uno.png",
+    "destacado": false,
+    "precioOferta": 0,
+    "oferta": false,
+    "especial": false,
+    "unidad": "OFERTA"
+  }
   ]
 }
